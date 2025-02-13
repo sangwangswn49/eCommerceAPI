@@ -27,3 +27,10 @@ jobs:
     - run: npm test 
     - name: Build Docker image
       run: docker build -t ecomerce-backend:${{ github.sha }} .
+
+    - name: Resource Information
+      run: |
+        echo "CPU Info:"
+        cat /proc/cpuinfo
+        echo "Memory Info:"
+        cat /proc/meminfo
