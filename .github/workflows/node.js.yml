@@ -25,3 +25,5 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test 
+    - name: Build Docker image
+      run: docker build -t ecomerce-backend:${{ github.sha }} .
