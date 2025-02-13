@@ -31,6 +31,7 @@ jobs:
     - name: Resource Information
       run: |
         echo "CPU Info:"
-        cat /proc/cpuinfo
+        lscpu
+        
         echo "Memory Info:"
-        cat /proc/meminfo
+        free -h
